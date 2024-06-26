@@ -1,6 +1,6 @@
-/*-----------------------------------*\
+/* /-----------------------------------\
   #style.css
-\*-----------------------------------*/
+\-----------------------------------/ */
 
 /**
  * copyright 2022 @codewithsadee
@@ -10,9 +10,9 @@
 
 
 
-/*-----------------------------------*\
+/* /-----------------------------------\
   #CUSTOM PROPERTY
-\*-----------------------------------*/
+\-----------------------------------/ */
 
 :root {
 
@@ -62,9 +62,9 @@
 
 
 
-/*-----------------------------------*\
+/* /-----------------------------------\
   #RESET
-\*-----------------------------------*/
+\-----------------------------------/ */
 
 *, *::before, *::after {
   margin: 0;
@@ -123,9 +123,9 @@ body {
 
 
 
-/*-----------------------------------*\
+/* /-----------------------------------\
   #REUSED STYLE
-\*-----------------------------------*/
+\-----------------------------------/ */
 
 .btn {
   color: var(--white);
@@ -164,10 +164,10 @@ body {
 
 
 
-
-/*-----------------------------------*\
+/* 
+/-----------------------------------\
   #HEADER
-\*-----------------------------------*/
+\-----------------------------------/ */
 
 header {
   position: fixed;
@@ -277,9 +277,9 @@ header .container {
 
 
 
-/*-----------------------------------*\
+/* /-----------------------------------\
   #HERO
-\*-----------------------------------*/
+\-----------------------------------/ */
 
 .hero { padding: 140px 0 var(--section-padding); }
 
@@ -335,101 +335,254 @@ header .container {
 
 
 
-/*-----------------------------------*\
+/* /-----------------------------------\
   #PODCAST
-\*-----------------------------------*/
+\-----------------------------------/ */
 
-.podcast { padding: var(--section-padding) 0; }
 
-.podcast-list {
-  display: grid;
-  gap: 30px;
-}
+  /* Add this CSS for the podcast section */
+  .podcast {
+    padding: 80px 0;
+    /* background-color: #f0ead6; */
+  }
 
-.podcast-card { border-radius: 4px; }
+  .podcast .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-.card-banner {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  z-index: 1;
-}
+  .podcast .panel {
+    height: 270px;
+    width: 190px;
+    position: relative;
+    margin-bottom: 20px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
 
-.card-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-}
+    &:hover {
+      .card {
+        filter: blur(1.5px);
+      }
+      .card1 {
+        background-size: 215% 135%;
+      }
+      .card2 {
+        background-size: 115% 115%;
+      }
+      .card3 {
+        background-size: 155% 115%;
+      }
+      .title {
+        color: rgba(255, 255, 255, 0.2);
+      }
+      .border {
+        border: 1px solid rgba(255, 255, 255, 1);
+      }
+      .slide {
+        bottom: 0px;
+      }
+      .ring:before,
+      .ring:after {
+        transform: translateX(-50%) translateY(-50%) rotate(310deg);
+      }
+    }
+  }
 
-.podcast-card:is(:hover, :focus) .card-banner::before {
-  background: hsla(0, 0%, 100%, 0.1);
-}
+  .podcast .ring,
+  .podcast .card,
+  .podcast .border,
+  .podcast .slide,
+  .podcast .line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.card-banner img { width: 100%; }
+  .podcast .ring {
+    color: #f1f0eb;
+    position: absolute;
+    top: 50%;
+    /* top: 0; */
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 230px;
+    
+  }
 
-.card-banner-icon {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  display: grid;
-  place-items: center;
-  color: var(--white);
-  border: 2px solid var(--white);
-  border-radius: 50%;
-  font-size: 20px;
-  transition: var(--transition);
-}
+  .podcast .card {
+    background: #f1f1f0;
+    position: relative;
+    transition: all 1s;
+    height: 300px;
+    /* width: 190px; */
+    width:260px;
+    /* justify-content: space-around; */
+    /* gap:5rem; */
+    border: 1px solid rgba(255, 255, 255, 1);
+    /* margin-top: 50px; Adjust the margin-top value according to your preference */
+  }
 
-.podcast-card:is(:hover, :focus) .card-banner-icon {
-  background: var(--white);
-  color: var(--blue-ryb);
-}
+  .podcast .card1 {
+    background-image: url("https://i.pinimg.com/564x/55/35/5f/55355f9777d556f49eeb883883682ecf.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 
-.card-meta {
-  position: relative;
+  .podcast .card2 {
+    background-image: url("https://i.pinimg.com/564x/39/0d/2f/390d2f36930f4b9a79360522c1a15900.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .podcast .card3 {
+    background-image: url("https://i.pinimg.com/564x/44/e7/80/44e78008f91b8d2f5d12474e7f2f2c98.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .podcast .ring:before,
+  .podcast .ring:after {
+    content: "";
+    padding: 0.7em 0.4em;
+    position: absolute;
+    left: 50%;
+    width: 135%;
+    top: 50%;
+    display: block;
+    border: 5px solid #50c9c3;
+    border-radius: 50%;
+    transition: transform 1s;
+    transform: translateX(-50%) translateY(-50%) rotate(50deg);
+  }
+
+  .podcast .ring:before {
+    border-color: rgb(62, 183, 216) rgb(225, 100, 148) rgba(0, 0, 0, 0)
+      rgba(0, 0, 0, 0);
+    z-index: -1;
+  }
+
+  .podcast .ring:after {
+    border-color: rgba(0, 0, 0, 0) rgba(149, 81, 213, 0) rgb(232, 73, 214)
+      rgb(31, 240, 212);
+  }
+
+  .podcast p {
+    text-align: center;
+    position: absolute;
+    font-family: "Playfair Display";
+  }
+
+  .podcast .title {
+    font-size: 36px;
+    font-weight: 700;
+    transition: all 1s;
+    top: 0;
+  }
+
+  .podcast .para {
+    bottom: 0;
+    font-size: 16px;
+    font-family: "Raleway";
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .podcast .border {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    height: 260px;
+    width: 180px;
+    transition: border 1s;
+    overflow: hidden;
+  }
+
+  .podcast .slide {
+    height: 260px;
+    width: 180px;
+    position: absolute;
+    border: 1px solid black;
+    bottom: -270px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: bottom 1s;
+    flex-direction: column;
+  }
+
+  .podcast .fa-plane {
+    font-size: 16px;
+  }
+
+/*container css*/
+.dropdown-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  color: var(--heliotrope-gray);
-  font-size: var(--fs-4);
-  margin-left: 35px;
-  margin-bottom: 15px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.dropdown-container .dropdown:nth-child(3) .dropbtn {
+  margin-right: 35px;
+  margin-left: 10px;
 }
 
-.card-meta::before {
-  content: "";
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #0f0fa9;
+  color: rgb(255, 244, 244);
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
   position: absolute;
-  top: 50%;
-  left: -35px;
-  transform: translateY(-2px);
-  width: 25px;
-  height: 2px;
-  background: var(--heliotrope-gray);
+  background-color: #90b2d6;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-10px);
 }
 
-.podcast-card .card-title {
-  display: inline;
-  padding: 3px 0;
-  background: var(--gradient);
-  background-position: 0 95%;
-  background-repeat: no-repeat;
-  background-size: 0 2px;
-  transition: var(--transition);
+
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+ /* Dropdown items */
+ .dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  display: block;
 }
 
-.podcast-card:is(:hover, :focus) .card-title { background-size: 100% 2px; }
+/* Change dropdown content appearance on hover */
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
 
-
-
-
-
-/*-----------------------------------*\
+/* Change appearance of dropdown items on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+/* 
+/-----------------------------------\
   #NEWSLETTER
-\*-----------------------------------*/
+\-----------------------------------/ */
 
 .newsletter { padding: var(--section-padding) 0; }
 
@@ -485,10 +638,10 @@ header .container {
 
 
 
-
-/*-----------------------------------*\
+/* 
+/-----------------------------------\
   #FOOTER
-\*-----------------------------------*/
+\-----------------------------------/ */
 
 .footer-top {
   padding: var(--section-padding) 0;
@@ -570,11 +723,11 @@ header .container {
 
 
 
+/* 
 
-
-/*-----------------------------------*\
+/-----------------------------------\
   #GO TO TOP
-\*-----------------------------------*/
+\-----------------------------------/ */
 
 .go-top {
   position: fixed;
@@ -605,10 +758,10 @@ header .container {
 
 
 
-
-/*-----------------------------------*\
+/* 
+/-----------------------------------\
   #RESPONSIVE
-\*-----------------------------------*/
+\-----------------------------------/ */
 
 /**
  * responsive for larger than 550px
@@ -940,7 +1093,8 @@ header .container {
     display: block;
     width: 100%;
     padding-top: 100%;
-    background: url("../images/hero-banner.png") no-repeat;
+    /* background: url("../images/pocast-9.jpg") no-repeat; */
+    background: url("https://assets-global.website-files.com/5fac161927bf86485ba43fd0/64705d94deb0547077083ec8_Cover_2022_05_55_-Top-Podcasts-to-Listen-to-in-2022-(According-to-Genre).jpeg") no-repeat;
     background-size: cover;
     border-radius: 100px;
   }

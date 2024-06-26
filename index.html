@@ -5,18 +5,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Micro - Podcast website</title>
+  <title>Be-your-Best-Self(ie)</title>
 
   <!-- 
     - favicon link
   -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
+  <!-- Podcast -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
   <!-- 
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
+  <!-- podcast link -->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
   <!-- 
     - google font link
   -->
@@ -41,7 +47,8 @@
       <div class="overlay" data-overlay></div>
 
       <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" alt="Micro logo">
+        <img  src="./assets/images/logo1.svg" alt="Micro logo" height="50px" width="50px"> <br>
+        <p style="color: rgb(242, 137, 236); font-size: 20px;">BE YOUR BEST SELFIE</p>
       </a>
 
       <button class="nav-toggle-btn" data-nav-toggle-btn>
@@ -56,19 +63,19 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#podcast" class="navbar-link">Podcast</a>
+            <a href="#podcast" class="navbar-link" onclick="podcast()">Podcast</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link">Host</a>
+            <a href="#" class="navbar-link" onclick="hostpage()">Host</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link">Blog</a>
+            <a href="#" class="navbar-link" onclick="blogpage()">Blog</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link">Contact</a>
+            <a href="#" class="navbar-link" onclick="redirect()">Contact</a>
           </li>
 
         </ul>
@@ -80,17 +87,17 @@
           </button>
 
           <button class="navbar-btn">
-            <ion-icon name="log-in-outline"></ion-icon>
+            <ion-icon name="log-in-outline" onclick="login()"></ion-icon>
           </button>
 
           <button class="navbar-btn">
-            <ion-icon name="cart-outline"></ion-icon>
+            <ion-icon name="musical-notes-outline" onclick="playlist()"></ion-icon>
           </button>
 
           <button class="btn">
             <ion-icon name="logo-paypal"></ion-icon>
 
-            <span>Donate</span>
+            <span onclick="subscription()">Subscribe</span>
           </button>
 
         </div>
@@ -117,26 +124,18 @@
           <img src="./assets/images/hero-title.png" alt="Podcast" class="hero-title">
 
           <p class="hero-text">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt in felis malesuada mollis purus id sit in
-            aliquet
-            lectus eget morbi dui felis.
+            Welcome to "Be Your Best-Self(ie)," the podcast that takes you on a journey to optimal health and wellness! 
           </p>
 
           <div class="hero-btn-group">
-
             <button class="btn btn-primary">
               <ion-icon name="headset"></ion-icon>
-
-              <span>Listen Now</span>
+              <a href="#podcast" style="color:white">Listen Now</a>
             </button>
-
             <div class="btn-link-wrapper">
-
               <p class="btn-title">Subscribe On:</p>
-
               <a href="#" class="btn-link">
                 <ion-icon name="logo-apple"></ion-icon>
-
                 <span>Apple Music</span>
               </a>
 
@@ -163,204 +162,111 @@
       <!-- 
         - #PODCAST
       -->
-
-      <section class="podcast" id="podcast">
-        <ul class="podcast-list">
-
-          <li>
-            <a href="#" class="podcast-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/podcast-1.png" alt="Tube Preamps, TLM103 vs. OJ 818, Podcastage's Beanies">
-
-                <div class="card-banner-icon">
-                  <ion-icon name="play"></ion-icon>
-                </div>
-              </figure>
-
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2022-02-15">Feb 15, 2022</time>
-
-                  <p class="pod-epi">Episodes: 01</p>
-                </div>
-
-                <h3 class="h3 card-title">Tube Preamps, TLM103 vs. OJ 818, Podcastage's Beanies</h3>
+      <!-- 
+    - #PODCAST
+  -->
+<section class="podcast" id="podcast">
+  <div class="container">
+      <div class="panel">
+          <div class="ring">
+              <div class="card card1"></div>
+              <div class="border">
+                  <p class="title">Health</p>
+                  <div class="slide">
+                      <h6 class="para">In the health section, discover a curated selection of podcasts catering to your well-being and interests:</h6>
+                      <!-- <div class="line">
+                        <button id="listenNowButton" class="btn btn-primary">
+                          <ion-icon name="headset"></ion-icon>
+                          <span >Listen Now</span>
+                        </button>
+                      </div>
+                      -->
+                     
+                      
+                  </div>
               </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="podcast-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/podcast-2.png" alt="Ask Unladylike: Late Bloomer with Forever 35">
-
-                <div class="card-banner-icon">
-                  <ion-icon name="play"></ion-icon>
-                </div>
-              </figure>
-
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2022-02-15">Feb 15, 2022</time>
-
-                  <p class="pod-epi">Episodes: 02</p>
-                </div>
-
-                <h3 class="h3 card-title">Ask Unladylike: Late Bloomer with Forever 35</h3>
+          </div>
+      </div>
+      
+      
+      <div class="panel">
+          <div class="ring">
+              <div class="card card2"></div>
+              <div class="border">
+                  <p class="title">Music</p>
+                  <div class="slide">
+                      <h6 class="para">Indulge in musical podcasts designed to soothe your mind and elevate your relaxation experience </h6>
+                      <!-- <div class="line">
+                        <button class="btn btn-primary">
+                          <ion-icon name="headset"></ion-icon>
+            
+                          <span>Listen Now</span>
+                        </button>
+                      </div> -->
+                    
+                  </div>
               </div>
+          </div>
+      </div>
+      <div class="panel">
+          <div class="ring">
+              <div class="card card3"></div>
+              <div class="border">
+                  <p class="title">Education</p>
+                  <div class="slide">
+                      <h6 class="para">Explore podcasts curated specifically to aid students in their educational journey, offering insights, tips, and inspiration</h6>
+                      <div class="line">
+                          
 
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="podcast-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/podcast-3.png" alt="How to Effectively Incentivize Team Members">
-
-                <div class="card-banner-icon">
-                  <ion-icon name="play"></ion-icon>
-                </div>
-              </figure>
-
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2022-02-15">Feb 15, 2022</time>
-
-                  <p class="pod-epi">Episodes: 03</p>
-                </div>
-
-                <h3 class="h3 card-title">How to Effectively Incentivize Team Members</h3>
+                      </div>
+                      <!-- <div class="line">
+                        
+                          <button class="btn btn-primary">
+                            <ion-icon name="headset"></ion-icon>
+              
+                            <span>Listen Now</span>
+                          </button>
+              
+                      </div> -->
+                  </div>
               </div>
+          </div>
+      </div>
+  </div>
 
-            </a>
-          </li>
+  <div class="dropdown-container">
+    <div class="dropdown">
+      <button class="dropbtn">Listen Now</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="gynaec()">Gynaecologist</a>
+        <a href="#" onclick="nutrition()">Nutritionist</a>
+        <a href="#">Fitness</a>
+        <a href="#">Emergency Remedies</a>
+        <a href="#">Dermatologists</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Listen Now</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="music()">Instrument Playing</a>
+        <a href="#">Therapy Sessions</a>
+        <a href="#">Listening to Music</a>
+        <a href="#">Understanding Music</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Listen Now</button>
+      <div class="dropdown-content">
+        
+        <a href="#">Interviews</a>
+        <a href="#">Competitive Exam</a>
+        <a href="#">Real-time Experience</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-          <li>
-            <a href="#" class="podcast-card">
 
-              <figure class="card-banner">
-                <img src="./assets/images/podcast-4.png" alt="How to go from Start-Up to Scale-Up">
-
-                <div class="card-banner-icon">
-                  <ion-icon name="play"></ion-icon>
-                </div>
-              </figure>
-
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2022-02-15">Feb 15, 2022</time>
-
-                  <p class="pod-epi">Episodes: 04</p>
-                </div>
-
-                <h3 class="h3 card-title">How to go from Start-Up to Scale-Up</h3>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="podcast-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/podcast-5.png" alt="Deadbuttons – Tired of You | Live at Club Heavy">
-
-                <div class="card-banner-icon">
-                  <ion-icon name="play"></ion-icon>
-                </div>
-              </figure>
-
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2022-02-15">Feb 15, 2022</time>
-
-                  <p class="pod-epi">Episodes: 05</p>
-                </div>
-
-                <h3 class="h3 card-title">Deadbuttons – Tired of You | Live at Club Heavy</h3>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="podcast-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/podcast-6.png" alt="Boogie Through the Universe with SOWO">
-
-                <div class="card-banner-icon">
-                  <ion-icon name="play"></ion-icon>
-                </div>
-              </figure>
-
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2022-02-15">Feb 15, 2022</time>
-
-                  <p class="pod-epi">Episodes: 06</p>
-                </div>
-
-                <h3 class="h3 card-title">Boogie Through the Universe with SOWO</h3>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="podcast-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/podcast-7.png" alt="Glittering Blackness, Fall – 4 | Live at Club Heavy">
-
-                <div class="card-banner-icon">
-                  <ion-icon name="play"></ion-icon>
-                </div>
-              </figure>
-
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2022-02-15">Feb 15, 2022</time>
-
-                  <p class="pod-epi">Episodes: 07</p>
-                </div>
-
-                <h3 class="h3 card-title">Glittering Blackness, Fall – 4 | Live at Club Heavy</h3>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="podcast-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/podcast-8.png" alt="The Meditative Photos of Chaelinjane">
-
-                <div class="card-banner-icon">
-                  <ion-icon name="play"></ion-icon>
-                </div>
-              </figure>
-
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2022-02-15">Feb 15, 2022</time>
-
-                  <p class="pod-epi">Episodes: 08</p>
-                </div>
-
-                <h3 class="h3 card-title">The Meditative Photos of Chaelinjane</h3>
-              </div>
-
-            </a>
-          </li>
-
-        </ul>
-      </section>
 
 
 
@@ -374,11 +280,10 @@
         <div class="newsletter-card">
 
           <div class="card-content">
-            <h3 class="h3 card-title">Sign Up For Our Newsletter. It’s Free!</h3>
+            <h3 class="h3 card-title">Sign Up For Our Newsletter. It's Free!</h3>
 
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt todeiy felis malesuada mollis purus id
-              sit in aliquet.
+              Get updated newsletter from our best experts and recommendations from all over world health care.
             </p>
           </div>
 
@@ -410,13 +315,13 @@
 
         <div class="footer-brand">
           <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" alt="Micro logo">
+            <img style="height: 70px; width: 60px;" src="./assets/images/logo1.svg" alt="Micro logo">
+            <p style="color: rgb(230, 151, 235);">BE-YOUR BEST SELFIE</p>
           </a>
 
           <p class="footer-text">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt in felis malesuada mollis purus id sit in
-            aliquet
-            lectus eget morbi dui felis malesuada.
+            "Be Your Best-Self(ie)," the podcast that takes you on a journey to optimal health and wellness! In today's fast-paced world, prioritizing our well-being can often feel like a challenge. But fear not, because here at "Be Your Best-Self(ie)," we're dedicated to providing you with the tools, knowledge, and inspiration to help you live your healthiest and happiest life.
+
           </p>
         </div>
 
@@ -427,15 +332,15 @@
           </li>
 
           <li>
-            <a href="mailto:hello@micro.com" class="footer-link">hello@micro.com</a>
+            <a href="mailto:hello@micro.com" class="footer-link">beyourbestselfie@gmail.com</a>
           </li>
 
           <li>
-            <a href="tel:+0123454678" class="footer-link">+01234 54678</a>
+            <a href="tel:+0123454678" class="footer-link">+91 01234 54678</a>
           </li>
 
           <li>
-            <a href="tel:+15780346789" class="footer-link">+1 (578) 034-6789</a>
+            <a href="tel:+15780346789" class="footer-link">+91 0543 034-6789</a>
           </li>
 
         </ul>
@@ -486,7 +391,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p class="copyright">
-          &copy; 2022 <a href="#">codewithsadee</a>. All Rights Reserved
+          &copy; 2024 <a href="#">Be-Your-Best-Self(ie)</a>. All Rights Reserved
         </p>
       </div>
     </div>
@@ -519,6 +424,140 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+
+    function hostpage()
+    {
+      window.location.href="host1.html";
+    }
+    function redirect()
+    {
+      window.location.href="contactpage.html";
+    }
+    function login()
+    {
+      window.location.href="loginsignuppage.html";
+    }
+    function blogpage()
+    {
+      window.location.href="blog.html";
+    }
+    function gynaec()
+    {
+      window.location.href="gynaec.html";
+    }
+    function nutrition()
+    {
+      window.location.href="nutrition.html";
+    }
+    function music()
+    {
+      window.location.href="music.html";
+    }
+    function playlist()
+    {
+      window.location.href="playlist.html";
+    }
+    function subscription()
+    {
+      window.location.href="subsciption.html";
+    }
+   
+
+    
+    // Optional: Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.style.visibility === 'visible') {
+        openDropdown.style.opacity = 0;
+        openDropdown.style.visibility = 'hidden';
+        openDropdown.style.transform = 'translateY(-10px)';
+      }
+    }
+  }
+}
+
+    window.addEventListener('load', () => {
+  var
+  carousels = document.querySelectorAll('.carousel');
+
+
+  for (var i = 0; i < carousels.length; i++) {
+    carousel(carousels[i]);
+  }
+});
+
+function carousel(root) {
+  var
+  figure = root.querySelector('figure'),
+  nav = root.querySelector('nav'),
+  images = figure.children,
+  n = images.length,
+  gap = root.dataset.gap || 0,
+  bfc = ('bfc' in root.dataset),
+
+  theta = 2 * Math.PI / n,
+  currImage = 0;
+
+
+  setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+  window.addEventListener('resize', () => {
+    setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+  });
+
+  setupNavigation();
+
+  function setupCarousel(n, s) {
+    var
+    apothem = s / (2 * Math.tan(Math.PI / n));
+
+
+    figure.style.transformOrigin = `50% 50% ${-apothem}px`;
+
+    for (var i = 0; i < n; i++)
+    images[i].style.padding = `${gap}px`;
+    for (i = 1; i < n; i++) {
+      images[i].style.transformOrigin = `50% 50% ${-apothem}px`;
+      images[i].style.transform = `rotateY(${i * theta}rad)`;
+    }
+    if (bfc)
+    for (i = 0; i < n; i++)
+    images[i].style.backfaceVisibility = 'hidden';
+
+    rotateCarousel(currImage);
+  }
+
+  function setupNavigation() {
+    nav.addEventListener('click', onClick, true);
+
+    function onClick(e) {
+      e.stopPropagation();
+
+      var t = e.target;
+      if (t.tagName.toUpperCase() != 'BUTTON')
+      return;
+
+      if (t.classList.contains('next')) {
+        currImage++;
+      } else
+      {
+        currImage--;
+      }
+
+      rotateCarousel(currImage);
+    }
+
+  }
+
+  function rotateCarousel(imageIndex) {
+    figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
+  }
+
+}
+  </script>
 
 </body>
 
